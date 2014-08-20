@@ -12,7 +12,6 @@ angular.module('erealm').controller('ContactController', ['$scope','client', fun
     $scope.mainTitle = "Say Hello",
     $scope.currentPage = "contact-page";
 
-
     client.getContacts().then(function(response) {
         $scope.contacts = response.data;
         $scope.changeMap(response.data[0]);
